@@ -33,3 +33,17 @@ function generatePassword() {
     alert("Must include at least one character type to proceed!");
     generatePassword();
     } 
+
+    // True? result will include value from the selection made
+    if(characterCon) {
+    results = results + character;
+    }
+    if(numberCon) {
+    results = results + number;
+    }
+    if(lowerCon) {
+    results = results + lower;
+    }
+    if(upperCon) {
+    results = results + upper;
+    }
