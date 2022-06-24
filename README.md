@@ -15,3 +15,6 @@ SO THAT I can create a strong password that provides greater security
 
  ## Repository link:
  https://github.com/Hannahbird/randomPassword.git
+ 
+ ## Deployed Link Screenshot
+ https://github.com/Hannahbird/randomPassword/blob/main/images/deployedPageScreenshot.png
