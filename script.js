@@ -14,7 +14,7 @@ function generatePassword() {
         alert("Password must be more than 8 characters but no more than 128!");
         return generatePassword();
     } else{
-        // re-define variables with prompt windows
+// re-define variables with prompt windows
         var characterCon = confirm("Would you like to include special characters?");
         var numberCon = confirm("Would you like to include numbers?");
         var lowerCon = confirm("Would you like to include lowercase letters?");
@@ -22,9 +22,9 @@ function generatePassword() {
         
     }
 
-   // Declined options. this will need to loop back to the start of the options if all are declined
+// Declined options. this will need to loop back to the start of the options if all are declined
 
-    if(
+if(
     !characterCon &&
     !numberCon &&
     !lowerCon &&
@@ -34,23 +34,23 @@ function generatePassword() {
     generatePassword();
     } 
 
-    // True? result will include value from the selection made
-    if(characterCon) {
+// True? result will include value from the selection made
+if(characterCon) {
     results = results + character;
     }
-    if(numberCon) {
+if(numberCon) {
     results = results + number;
     }
-    if(lowerCon) {
+if(lowerCon) {
     results = results + lower;
     }
-    if(upperCon) {
+if(upperCon) {
     results = results + upper;
     }
-    // Concantenate math
+// Concantenate math
     var newSelection = "";
-    // Selections
-    for(var i = 0; i < length; i++) {
+// Selections
+for(var i = 0; i < length; i++) {
     newSelection += results.charAt(Math.floor(Math.random() * results.length - 1));
     console.log(newSelection);
     }
@@ -58,4 +58,13 @@ function generatePassword() {
     console.log(newSelection);
     return newSelection;
   }
-  
+  function writePassword() {
+    var password = generatePassword();
+    var passwordText = document.querySelector("#password");
+    
+    passwordText.value = password;
+    }
+    
+    // Add event listener to generate button
+    generateBtn.addEventListener("click", writePassword);
+    
