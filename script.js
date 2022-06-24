@@ -24,12 +24,7 @@ function generatePassword() {
 
 // Declined options. this will need to loop back to the start of the options if all are declined
 
-if(
-    !characterCon &&
-    !numberCon &&
-    !lowerCon &&
-    !upperCon 
-    ) {
+if( !characterCon && !numberCon && !lowerCon && !upperCon) {
     alert("Must include at least one character type to proceed!");
     generatePassword();
     } 
