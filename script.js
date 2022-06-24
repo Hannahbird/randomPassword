@@ -47,3 +47,15 @@ function generatePassword() {
     if(upperCon) {
     results = results + upper;
     }
+    // Concantenate math
+    var newSelection = "";
+    // Selections
+    for(var i = 0; i < length; i++) {
+    newSelection += results.charAt(Math.floor(Math.random() * results.length - 1));
+    console.log(newSelection);
+    }
+
+    console.log(newSelection);
+    return newSelection;
+  }
+  
